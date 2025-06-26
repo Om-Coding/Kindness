@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Kindness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 300% 100%;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        .story-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .story-name::before {
+            content: '💝';
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #34495e;
+            font-style: italic;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .story-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -5px;
+            font-size: 3rem;
+            color: #3498db;
+            font-weight: bold;
+            opacity: 0.3;
+        }
+
+        .story-text::after {
+            content: '"';
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+            font-size: 3rem;
+            color: #3498db;
+            font-weight: bold;
+            opacity: 0.3;
+        }
+
+        .kindness-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.1;
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover .kindness-icon {
+            opacity: 0.3;
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Stagger animation delays */
+        .story-card:nth-child(1) { animation-delay: 0.1s; }
+        .story-card:nth-child(2) { animation-delay: 0.2s; }
+        .story-card:nth-child(3) { animation-delay: 0.3s; }
+        .story-card:nth-child(4) { animation-delay: 0.4s; }
+        .story-card:nth-child(5) { animation-delay: 0.5s; }
+        .story-card:nth-child(6) { animation-delay: 0.6s; }
+        .story-card:nth-child(7) { animation-delay: 0.7s; }
+        .story-card:nth-child(8) { animation-delay: 0.8s; }
+        .story-card:nth-child(9) { animation-delay: 0.9s; }
+        .story-card:nth-child(10) { animation-delay: 1.0s; }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .story-card {
+                padding: 25px;
+            }
+        }
+         .navbar {
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 1rem 2rem;
+                width: 200px;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Kindness Matters</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">School Kindness</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Wayfinder Lesson</a>
+                </li>
+                <li class="nav-item"> 
+                    <a href="#" class="nav-link">Daily Kindness</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Activities</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="container">
+        <div class="header">
+            <h1>School Kindness</h1>
+            <p class="subtitle">Beautiful moments of compassion and care from our school community</p>
+        </div>
+
+        <div class="stories-grid">
+            <div class="story-card">
+                <div class="kindness-icon">🤝</div>
+                <div class="story-name">Akshat Srivastava</div>
+                <div class="story-text">When I drop something, someone always picks it up for me</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">📚</div>
+                <div class="story-name">Srininja</div>
+                <div class="story-text">Someone helped me carry my books, when I had a bunch of books and binders</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">👫</div>
+                <div class="story-name">Carrisa</div>
+                <div class="story-text">In the first week of school I had no one to sit with, but I found someone who would let me sit with them and now, we are more than best friends</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">🏥</div>
+                <div class="story-name">Ibby M</div>
+                <div class="story-text">Someone sprained his leg, and I helped him get his books</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">🍪</div>
+                <div class="story-name">Kaushik</div>
+                <div class="story-text">I helped someone with their project and he gave me a cookie</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">👨‍👧</div>
+                <div class="story-name">Prisha</div>
+                <div class="story-text">Helped carry books for my dad</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">🆘</div>
+                <div class="story-name">Aidin</div>
+                <div class="story-text">I saw someone fall down so I helped them up</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">💧</div>
+                <div class="story-name">Neivaan</div>
+                <div class="story-text">I saw someone crying, I gave them water and tried to cheer them up</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">🔤</div>
+                <div class="story-name">Kapil</div>
+                <div class="story-text">I have helped my brother learn his ABC's</div>
+            </div>
+
+            <div class="story-card">
+                <div class="kindness-icon">🧮</div>
+                <div class="story-name">Bhuvin</div>
+                <div class="story-text">I helped my sister do math</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✨ Every act of kindness creates ripples of positivity ✨</p>
+        </div>
+    </div>
+</body>
+</html>
