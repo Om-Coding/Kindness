@@ -197,7 +197,30 @@
                 padding: 25px;
             }
         }
-         .navbar {
+   @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .content-section {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .navbar {
                 padding: 1rem;
             }
 
@@ -231,6 +254,16 @@
                 width: 200px;
                 text-align: center;
             }
+
+            .stories-grid,
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
