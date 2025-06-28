@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>Stories of Kindness</title>
+    <title>Journey of Kindness</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
         * {
             margin: 0;
@@ -13,45 +13,46 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffeaa7, #fab1a0, #fd79a8);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             min-height: 100vh;
-            padding: 20px;
-            line-height: 1.6;
-            padding-top: 100px; /* Add space for fixed navbar */
+            padding-top: 80px;
+            overflow-x: hidden;
         }
 
-        /* Navbar Styles */
+        /* Navbar Styles - Consistent with School Kindness page */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            height: 70px;
         }
 
         .nav-logo {
             font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #e17055, #fdcb6e);
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
             transition: all 0.3s ease;
         }
 
@@ -62,6 +63,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
+            align-items: center;
             gap: 2rem;
             margin: 0;
         }
@@ -72,8 +74,9 @@
 
         .nav-link {
             text-decoration: none;
-            color: #2d3436;
+            color: #2c3e50;
             font-weight: 500;
+            font-size: 1rem;
             padding: 0.5rem 1rem;
             border-radius: 25px;
             transition: all 0.3s ease;
@@ -88,7 +91,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             transition: left 0.3s ease;
             z-index: -1;
         }
@@ -106,19 +109,18 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 5px;
         }
 
         .nav-toggle span {
             width: 25px;
             height: 3px;
-            background: #2d3436;
+            background: #667eea;
             margin: 3px 0;
             transition: 0.3s;
             border-radius: 2px;
         }
 
-        /* Mobile hamburger animation */
         .nav-toggle.active span:nth-child(1) {
             transform: rotate(-45deg) translate(-5px, 6px);
         }
@@ -131,161 +133,13 @@
             transform: rotate(45deg) translate(-5px, -6px);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-        .header {
-            background: linear-gradient(45deg, #e17055, #fdcb6e);
-            padding: 60px 40px;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="25" r="3" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="50" r="2.5" fill="rgba(255,255,255,0.12)"/><circle cx="25" cy="75" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="2" fill="rgba(255,255,255,0.09)"/></svg>') repeat;
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translate(-50px, -50px) rotate(0deg); }
-            100% { transform: translate(-50px, -50px) rotate(360deg); }
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-
-        .header p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            position: relative;
-            z-index: 1;
-        }
-
-        .stories-grid {
-            padding: 60px 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .story-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .story-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .story-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .story-title {
-            color: #2d3436;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .story-content {
-            color: #636e72;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .story-author {
-            color: #74b9ff;
-            font-style: italic;
-            font-size: 1rem;
-            text-align: right;
-            border-top: 1px solid #ddd;
-            padding-top: 15px;
-        }
-
-        .heart-icon {
-            color: #ff6b6b;
-            font-size: 1.5rem;
-            margin-right: 10px;
-            animation: heartbeat 2s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 50%, 100% { transform: scale(1); }
-            25%, 75% { transform: scale(1.1); }
-        }
-
-        .quote-section {
-            background: linear-gradient(135deg, #74b9ff, #0984e3);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-        }
-
-        .quote {
-            font-size: 1.8rem;
-            font-style: italic;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .quote-author {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* Mobile Responsive */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
-                padding-top: 80px;
+                padding-top: 70px;
             }
 
             .navbar {
-                padding: 0.8rem 0;
-            }
-
-            .nav-container {
-                padding: 0 1rem;
+                padding: 1rem 0;
             }
 
             .nav-menu {
@@ -318,48 +172,355 @@
                 width: 200px;
                 text-align: center;
             }
+        }
 
-            .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .header p {
-                font-size: 1.1rem;
-            }
-            
-            .stories-grid {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
-            }
-            
-            .header, .quote-section {
-                padding: 40px 20px;
-            }
+        /* Hero Section */
+        .hero-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem 0;
+        }
 
-            .quote {
-                font-size: 1.4rem;
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .shape:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            top: 30%;
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            position: relative;
+            max-width: 600px;
+            text-align: center;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease-out forwards;
+            margin: 0 1rem;
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
 
-        @media (max-width: 480px) {
-            .nav-logo {
-                font-size: 1.5rem;
+        .content-card {
+            opacity: 0;
+        }
+
+        .title {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .kindness-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Cards Section */
+        .cards-section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+
+        .kindness-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 380px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: cardSlideUp 0.8s ease-out forwards;
+        }
+
+        .kindness-card:nth-child(1) { animation-delay: 0.2s; }
+        .kindness-card:nth-child(2) { animation-delay: 0.4s; }
+        .kindness-card:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes cardSlideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .kindness-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .card-img-top img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .card-title {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.4);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .content-card {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .kindness-stats {
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            .header h1 {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .section-title h2 {
                 font-size: 2rem;
             }
 
-            .story-card {
-                padding: 20px;
-            }
-
-            .story-title {
-                font-size: 1.3rem;
-            }
-
-            .story-content {
-                font-size: 1rem;
+            .cards-section {
+                padding: 2rem 0;
             }
         }
     </style>
@@ -367,10 +528,10 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">❤️ Kindness Matters</a>
+            <a href="#" class="nav-logo">Kindness Matters</a>
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
-                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="SK.html" class="nav-link">School Kindness</a>
@@ -393,76 +554,96 @@
         </div>
     </nav>
     
-    <div class="container">
-        <div class="header">
-            <h1>❤️ Stories of Kindness</h1>
-            <p>Heartwarming tales that remind us of the beauty in humanity</p>
+    <div class="hero-section">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
-
-        <div class="stories-grid">
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">💝</span>The Coffee Shop Angel</h3>
-                <p class="story-content">
-                    Every morning, 78-year-old Margaret would sit alone at the corner coffee shop, watching the world go by. Sarah, a busy college student, noticed her solitude and began joining her for coffee. What started as a simple gesture blossomed into a beautiful friendship. Margaret shared stories of her late husband, while Sarah found wisdom and comfort in their daily conversations. When Margaret fell ill, Sarah organized the entire coffee shop community to visit her in the hospital, bringing flowers, cards, and endless love. Margaret recovered, and their friendship continues to inspire everyone who witnesses their bond.
-                </p>
-                <p class="story-author">- As told by the Coffee Shop Community</p>
+        
+        <div class="content-card">
+            <h1 class="title">Kindness Journey</h1>
+            <p class="subtitle">
+                Discover a year-long celebration of compassion, empathy, and human connection. 
+                From August to June, witness the beautiful tapestry of kindness unfold.
+            </p>
+            
+            <a class="cta-button pulse" 
+               href="https://docs.google.com/presentation/d/1OoTDGUrCnah60ADHOH75SKWg7vcZkP1jaznydedErpI/edit?slide=id.g22eeedc5729_0_3148#slide=id.g22eeedc5729_0_3148"
+               target="_blank"
+               rel="noopener noreferrer">
+                ✨ Explore the Journey ✨
+            </a>
+            
+            <div class="kindness-stats">
+                <div class="stat-item">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Months</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Acts of Kindness</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">♥</div>
+                    <div class="stat-label">Hearts Touched</div>
+                </div>
             </div>
-
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">🌟</span>The Grocery Store Hero</h3>
-                <p class="story-content">
-                    When single mother Lisa's card was declined at the grocery store checkout with a cart full of food for her three children, she felt overwhelmed with embarrassment. The gentleman behind her, without saying a word, stepped forward and paid her entire $150 bill. He simply said, "We've all been there," and walked away before she could properly thank him. Lisa later discovered he was a local teacher who regularly helped families in need. His act of kindness inspired Lisa to start a community food drive that has now fed hundreds of families in their neighborhood.
-                </p>
-                <p class="story-author">- Lisa M., Community Volunteer</p>
-            </div>
-
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">🎨</span>The Neighborhood Artist</h3>
-                <p class="story-content">
-                    When 12-year-old Marcus showed interest in art but couldn't afford supplies, his elderly neighbor Mrs. Chen noticed his talent through his sidewalk chalk drawings. She began leaving art supplies on his doorstep anonymously, along with encouraging notes. Marcus's confidence grew, and his artwork flourished. Years later, when Marcus won a scholarship to art school, he discovered Mrs. Chen's secret kindness. Now a successful artist, Marcus returns every year to paint a mural in their neighborhood, continuing the cycle of inspiration and generosity that changed his life.
-                </p>
-                <p class="story-author">- Marcus T., Professional Artist</p>
-            </div>
-
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">🚗</span>The Roadside Miracle</h3>
-                <p class="story-content">
-                    During a terrible storm, Emma's car broke down on a deserted highway with her newborn baby. Panicked and with no cell service, she watched as car after car passed by. Finally, a truck stopped. The driver, a grandfather named Joe, not only fixed her car but followed her home to ensure she arrived safely. He refused any payment, saying his own daughter had once been in a similar situation and a stranger had helped her. Emma now keeps emergency kits in her car to help other stranded motorists, carrying forward Joe's spirit of compassion.
-                </p>
-                <p class="story-author">- Emma R., Mother and Good Samaritan</p>
-            </div>
-
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">📚</span>The Library Guardian</h3>
-                <p class="story-content">
-                    When the local library faced budget cuts and potential closure, 9-year-old Ava couldn't bear the thought of losing her favorite place. She began a petition and organized bake sales with her grandmother's help. Their efforts caught the attention of local business owner Mr. Rodriguez, who was moved by Ava's determination. He rallied other businesses to sponsor the library, ensuring it stayed open. Today, the library thrives with a special children's reading corner named "Ava's Inspiration Corner," where she still volunteers every weekend, reading to younger children.
-                </p>
-                <p class="story-author">- The Riverside Public Library</p>
-            </div>
-
-            <div class="story-card">
-                <h3 class="story-title"><span class="heart-icon">🏠</span>The Moving Day Miracle</h3>
-                <p class="story-content">
-                    When veteran Tom injured his back right before moving day, he thought he'd have to forfeit his deposit and stay in his unaffordable apartment. His neighbor posted about Tom's situation on social media, and within hours, dozens of strangers showed up with trucks, boxes, and helping hands. They moved his entire household in one afternoon, refusing any payment. Many of these volunteers had never met Tom before, but they understood the importance of helping a neighbor in need. Tom now coordinates similar community help efforts, ensuring no one has to face difficult times alone.
-                </p>
-                <p class="story-author">- Tom S., Community Organizer</p>
-            </div>
-        </div>
-
-        <div class="quote-section">
-            <p class="quote">"No act of kindness, no matter how small, is ever wasted."</p>
-            <p class="quote-author">- Aesop</p>
         </div>
     </div>
+
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="section-title">
+                <h2>Stories of Kindness</h2>
+                <p>Inspiring real-life moments that show how small acts can create big changes</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="kindness-card">
+                    <div class="card-img-top">
+                        <img src="https://assets2.cbsnewsstatic.com/hub/i/r/2019/04/05/4ebc222b-8098-4fd9-bd0a-c6942f0aca2a/thumbnail/1280x720/22fed702024953dd4b91275a836126d4/0405-en-otrskateborders-hartman-1822952-640x360.jpg" alt="Skateboarding Heroes">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Skateboarding Heroes</h5>
+                        <p class="card-text">How a simple act of kindness transformed a boy's birthday. When 13-year-old Gavin Mabes and some friends went to a skate park, nobody was there except Carter Bruynell, who was celebrating his 5th birthday with his mom. That's when something unexpected happened.</p>
+                        <a href="https://youtu.be/RmQczPAz5Os" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="kindness-card">
+                    <div class="card-img-top">
+                        Image Coming Soon
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Labels We Carry</h5>
+                        <p class="card-text">Sometimes the negative labels we carry are put on us from things people have said, lies we've believed, or the way we feel about ourselves. However, the only label that we should be carrying is LOVED.</p>
+                        <a href="https://youtu.be/hNS_D-pw8y4" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="kindness-card">
+                    <div class="card-img-top">
+                        Image Coming Soon
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kindness Boomerang</h5>
+                        <p class="card-text">Watch as the camera tracks an act of kindness as it's passed from one individual to the next and manages to boomerang back to the person who set it into motion. A beautiful demonstration of how kindness spreads.</p>
+                        <a href="https://youtu.be/nwAYpLVyeFU" class="btn btn-primary" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
     <script>
-        // Mobile menu toggle with animation
+        // Mobile menu toggle
         document.getElementById('navToggle').addEventListener('click', function() {
             const navMenu = document.getElementById('navMenu');
             const navToggle = document.getElementById('navToggle');
-            
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
@@ -472,26 +653,66 @@
             link.addEventListener('click', () => {
                 const navMenu = document.getElementById('navMenu');
                 const navToggle = document.getElementById('navToggle');
-                
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             });
         });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.15)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
         // Add smooth scroll and interaction effects
         document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                }
+            });
+
+            // Parallax effect for floating shapes
+            document.addEventListener('mousemove', function(e) {
+                const shapes = document.querySelectorAll('.shape');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                shapes.forEach((shape, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = (mouseX - 0.5) * speed * 50;
+                    const y = (mouseY - 0.5) * speed * 50;
+                    shape.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+            
+            // Add click ripple effect to button
+            const button = document.querySelector('.cta-button');
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                button.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+
             // Scroll animations for cards
             const observerOptions = {
                 threshold: 0.1,
@@ -501,20 +722,27 @@
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.transform = 'translateY(0)';
-                        entry.target.style.opacity = '1';
+                        entry.target.style.animationPlayState = 'running';
                     }
                 });
             }, observerOptions);
 
-            // Initial state for animation
-            document.querySelectorAll('.story-card').forEach((card, index) => {
-                card.style.transform = 'translateY(50px)';
-                card.style.opacity = '0';
-                card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            document.querySelectorAll('.kindness-card').forEach(card => {
                 observer.observe(card);
             });
         });
+        
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
