@@ -751,16 +751,16 @@
                     <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="SK.html" class="nav-link">School Kindness</a>
+                    <a href="#stories" class="nav-link">Stories</a>
                 </li>
                 <li class="nav-item">
-                    <a href="stories.html" class="nav-link">Stories</a>
-                </li>
-                <li class="nav-item"> 
-                    <a href="DK.html" class="nav-link">Daily Kindness</a>
+                    <a href="#activities" class="nav-link">Activities</a>
                 </li>
                 <li class="nav-item">
-                    <a href="activities.html" class="nav-link">Activities</a>
+                    <a href="#quiz" class="nav-link">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tracker" class="nav-link">Tracker</a>
                 </li>
             </ul>
             <div class="nav-toggle" id="navToggle">
@@ -899,168 +899,235 @@
             <div class="story-card">
                 <div class="story-title">The Book Bridge</div>
                 <div class="story-content">
-                    When Aria discovered some classmates didn't have books at home, she started a book-sharing program where students could take home extra books from the classroom library.
+                    When Aria discovered her school library had limited books for students learning English, she started a book drive. Students donated books in multiple languages, creating a diverse collection that helped newcomers feel welcomed and supported in their learning journey.
                 </div>
                 <div class="story-lesson">
-                    <strong>Lesson:</strong> Sharing resources helps everyone have equal opportunities to learn and grow.
+                    <strong>Lesson:</strong> Kindness can bridge language barriers and help everyone feel like they belong in the learning community.
                 </div>
             </div>
             
             <div class="story-card">
-                <div class="story-title">The Compliment Campaign</div>
+                <div class="story-title">The Tech Mentor</div>
                 <div class="story-content">
-                    Marcus began leaving positive notes in classmates' lockers, brightening their days with specific compliments about their talents and contributions to the class.
+                    Marcus, who was great with computers, noticed his elderly neighbor struggling with online shopping and video calls. He started visiting weekly to teach her technology skills, which helped her stay connected with family and access services she needed.
                 </div>
                 <div class="story-lesson">
-                    <strong>Lesson:</strong> Recognition and appreciation are forms of kindness that cost nothing but mean everything.
+                    <strong>Lesson:</strong> Sharing our skills with others creates connections across generations and makes technology accessible to everyone.
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote-section">
+        "No act of kindness, no matter how small, is ever wasted. Every gesture of compassion creates ripples that touch lives in wayswe may never fully understand."
+    </div>
+
+    <section class="content-section" id="activities">
+        <h2 class="section-title">Daily Kindness Activities</h2>
+        <div class="activities-grid">
+            <div class="activity-card">
+                <div class="activity-icon">📝</div>
+                <div class="activity-title">Compliment Journal</div>
+                <div class="activity-description">Write down three genuine compliments you can give to others each day, then put them into action.</div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-icon">🤝</div>
+                <div class="activity-title">Help a Classmate</div>
+                <div class="activity-description">Offer assistance with homework, projects, or simply listen when someone needs support.</div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-icon">🌱</div>
+                <div class="activity-title">Environmental Care</div>
+                <div class="activity-description">Pick up litter, start a recycling initiative, or organize a school garden project.</div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-icon">🎁</div>
+                <div class="activity-title">Random Acts</div>
+                <div class="activity-description">Leave encouraging notes, share snacks, or surprise someone with a small thoughtful gesture.</div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-icon">👥</div>
+                <div class="activity-title">Include Others</div>
+                <div class="activity-description">Invite someone new to join your group, include quiet students in conversations, or start an inclusive club.</div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-icon">🏠</div>
+                <div class="activity-title">Family Kindness</div>
+                <div class="activity-description">Help with chores without being asked, spend quality time with family members, or express gratitude regularly.</div>
             </div>
         </div>
     </section>
 
     <section class="interactive-section" id="quiz">
         <h2 class="section-title" style="color: white;">Test Your Kindness Knowledge</h2>
-        <div class="quiz-container" id="quizContainer">
-            <div class="quiz-question" id="quizQuestion">What happens when someone shares their talents with others?</div>
-            <div class="quiz-options" id="quizOptions">
-                <div class="quiz-option" onclick="selectOption(this, false)">They lose their competitive advantage</div>
-                <div class="quiz-option" onclick="selectOption(this, true)">They create value for the entire community</div>
-                <div class="quiz-option" onclick="selectOption(this, false)">They waste their time and energy</div>
-                <div class="quiz-option" onclick="selectOption(this, false)">They should keep their talents secret</div>
+        <div class="quiz-container">
+            <div class="quiz-question" id="questionText">
+                Which of these actions has the greatest positive impact on a school community?
             </div>
-            <button class="quiz-button" onclick="submitAnswer()">Submit Answer</button>
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="selectOption(this, false)">
+                    Keeping to yourself to avoid conflicts
+                </div>
+                <div class="quiz-option" onclick="selectOption(this, false)">
+                    Only helping friends you already know well
+                </div>
+                <div class="quiz-option" onclick="selectOption(this, true)">
+                    Creating opportunities for everyone to feel included and valued
+                </div>
+                <div class="quiz-option" onclick="selectOption(this, false)">
+                    Focusing solely on academic achievement
+                </div>
+            </div>
+            <button class="quiz-button" onclick="submitAnswer()" id="submitBtn">Submit Answer</button>
             <div class="quiz-result" id="quizResult"></div>
         </div>
-    </section>
-
-    <section class="content-section" id="activities">
-        <h2 class="section-title">Daily Kindness Activities</h2>
-        <p class="content-text">
-            Transform your understanding of kindness into action with these engaging activities. Each one is designed to help you practice kindness while discovering how it strengthens communities and builds connections.
-        </p>
-        
-        <div class="activities-grid">
-            <div class="activity-card" onclick="showActivityDetails('compliment')">
-                <div class="activity-icon">💝</div>
-                <div class="activity-title">Compliment Challenge</div>
-                <div class="activity-description">Give three genuine compliments to different people today and notice how it brightens both your days.</div>
-            </div>
-            
-            <div class="activity-card" onclick="showActivityDetails('help')">
-                <div class="activity-icon">🤝</div>
-                <div class="activity-title">Helper's High</div>
-                <div class="activity-description">Offer assistance to someone without being asked and experience the natural joy that comes from helping.</div>
-            </div>
-            
-            <div class="activity-card" onclick="showActivityDetails('listen')">
-                <div class="activity-icon">👂</div>
-                <div class="activity-title">Active Listening</div>
-                <div class="activity-description">Practice giving someone your full attention in conversation and see how it deepens your connection.</div>
-            </div>
-            
-            <div class="activity-card" onclick="showActivityDetails('include')">
-                <div class="activity-icon">🌈</div>
-                <div class="activity-title">Inclusion Initiative</div>
-                <div class="activity-description">Invite someone who seems left out to join your group or activity.</div>
-            </div>
-            
-            <div class="activity-card" onclick="showActivityDetails('share')">
-                <div class="activity-icon">🎁</div>
-                <div class="activity-title">Sharing Circle</div>
-                <div class="activity-description">Share something you have—knowledge, food, or time—with someone who could benefit.</div>
-            </div>
-            
-            <div class="activity-card" onclick="showActivityDetails('appreciate')">
-                <div class="activity-icon">🌟</div>
-                <div class="activity-title">Appreciation Express</div>
-                <div class="activity-description">Write a note thanking someone for their positive impact on your life or community.</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="quote-section">
-        <div>No act of kindness, no matter how small, is ever wasted. Every kind gesture creates ripples that extend far beyond what we can see.</div>
-        <div style="margin-top: 1rem; font-size: 1.2rem; color: #667eea;">- Inspired by Aesop</div>
     </section>
 
     <section class="content-section" id="tracker">
         <h2 class="section-title">Your Kindness Journey</h2>
         <div class="kindness-tracker">
             <div class="tracker-title">Daily Kindness Tracker</div>
-            <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">
-                Record your acts of kindness and watch how they create positive changes in your community.
-            </p>
-            <input type="text" class="tracker-input" id="kindnessInput" placeholder="Describe a kind act you performed today...">
+            <input type="text" class="tracker-input" id="kindnessInput" placeholder="What kind act did you do today?">
             <button class="tracker-button" onclick="addKindnessAct()">Add to My Journey</button>
             <div class="tracker-list" id="kindnessList"></div>
         </div>
         
         <div class="progress-section">
-            <h3 style="margin-bottom: 1rem;">Your Kindness Impact</h3>
+            <h3 style="margin-bottom: 1rem;">Your Impact Grows Every Day</h3>
             <div class="progress-ring">
                 <div class="progress-ring-circle"></div>
             </div>
-            <p>Every act of kindness you perform contributes to a more connected and caring world. Keep going!</p>
-            <div id="kindnessCount" style="font-size: 2rem; font-weight: bold; margin-top: 1rem;">0 acts of kindness recorded</div>
+            <p>Every act of kindness creates ripples that extend far beyond what we can see. Keep building a better world, one kind gesture at a time.</p>
         </div>
     </section>
 
     <section class="cta-section">
-        <h2 class="cta-title">Start Your Kindness Revolution</h2>
-        <p class="cta-text">
-            You now understand that kindness isn't just about being nice—it's about recognizing that we're all interconnected. 
-            Your talents, combined with kindness, can contribute to the amazing tapestry of human achievement. 
-            What will your contribution be?
-        </p>
+        <h2 class="cta-title">Start Your Kindness Revolution Today</h2>
+        <div class="cta-text">
+            The world needs your unique talents, shared with kindness and generosity. Begin with small acts, watch them grow into movements, and become part of the force that builds civilizations and transforms lives.
+        </div>
     </section>
 
     <script>
-        // Quiz functionality
-        let selectedOption = null;
-        let currentQuestionIndex = 0;
-        
-        const questions = [
-            {
-                question: "What happens when someone shares their talents with others?",
-                options: [
-                    { text: "They lose their competitive advantage", correct: false },
-                    { text: "They create value for the entire community", correct: true },
-                    { text: "They waste their time and energy", correct: false },
-                    { text: "They should keep their talents secret", correct: false }
-                ],
-                explanation: "When people share their talents, they create exponential value that benefits everyone!"
-            },
-            {
-                question: "Why is kindness essential for human civilization?",
-                options: [
-                    { text: "It makes people feel good temporarily", correct: false },
-                    { text: "It's required by law in most countries", correct: false },
-                    { text: "It enables cooperation and shared progress", correct: true },
-                    { text: "It's only important for religious people", correct: false }
-                ],
-                explanation: "Kindness is the foundation that allows humans to work together and build amazing things!"
-            },
-            {
-                question: "What's the best way to practice kindness at school?",
-                options: [
-                    { text: "Only be kind to your close friends", correct: false },
-                    { text: "Look for opportunities to help and include others", correct: true },
-                    { text: "Be kind only when teachers are watching", correct: false },
-                    { text: "Kindness isn't important in academic settings", correct: false }
-                ],
-                explanation: "School is a perfect place to practice inclusive kindness that helps everyone thrive!"
-            }
-        ];
+        // Floating Hearts Animation
+        function createHeart() {
+            const heartsContainer = document.getElementById('floatingHearts');
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heartsContainer.appendChild(heart);
+            
+            setTimeout(() => {
+                heartsContainer.removeChild(heart);
+            }, 8000);
+        }
 
-        function selectOption(element, isCorrect) {
-            // Remove previous selection
+        setInterval(createHeart, 2000);
+
+        // Scroll Indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section, .stat-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animated Counter for Stats
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = Math.floor(current);
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        statNumbers.forEach(stat => {
+            statsObserver.observe(stat);
+        });
+
+        // Quiz Functionality
+        let selectedOption = null;
+        let isCorrect = false;
+
+        function selectOption(element, correct) {
             document.querySelectorAll('.quiz-option').forEach(opt => {
                 opt.classList.remove('selected');
             });
-            
-            // Add selection to clicked option
             element.classList.add('selected');
-            selectedOption = { element, isCorrect };
+            selectedOption = element;
+            isCorrect = correct;
         }
 
         function submitAnswer() {
@@ -1069,302 +1136,107 @@
                 return;
             }
 
-            const resultDiv = document.getElementById('quizResult');
-            const currentQuestion = questions[currentQuestionIndex];
+            const result = document.getElementById('quizResult');
+            result.style.display = 'block';
             
-            if (selectedOption.isCorrect) {
-                resultDiv.className = 'quiz-result correct';
-                resultDiv.innerHTML = `<strong>Correct!</strong> ${currentQuestion.explanation}`;
+            if (isCorrect) {
+                result.className = 'quiz-result correct';
+                result.innerHTML = '🎉 Correct! Creating inclusive opportunities helps everyone feel valued and builds stronger communities where everyone can thrive together.';
             } else {
-                resultDiv.className = 'quiz-result incorrect';
-                resultDiv.innerHTML = `<strong>Not quite right.</strong> ${currentQuestion.explanation}`;
+                result.className = 'quiz-result incorrect';
+                result.innerHTML = '💭 Not quite! The best approach is creating opportunities for everyone to feel included and valued. This builds stronger, more supportive communities.';
             }
-            
-            resultDiv.style.display = 'block';
-            
-            // Move to next question after delay
-            setTimeout(() => {
-                nextQuestion();
-            }, 3000);
+
+            document.getElementById('submitBtn').textContent = 'Try Another Question';
+            document.getElementById('submitBtn').onclick = resetQuiz;
         }
 
-        function nextQuestion() {
-            currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
-            loadQuestion();
-        }
+        function resetQuiz() {
+            const questions = [
+                {
+                    question: "What is the most effective way to show kindness to someone who seems upset?",
+                    options: [
+                        { text: "Give them advice on how to fix their problems", correct: false },
+                        { text: "Listen actively and offer your support", correct: true },
+                        { text: "Tell them it's not that serious", correct: false },
+                        { text: "Ignore them to give them space", correct: false }
+                    ],
+                    explanation: "Active listening and offering support shows genuine care and respect for their feelings."
+                },
+                {
+                    question: "Which action demonstrates environmental kindness?",
+                    options: [
+                        { text: "Only caring about issues that affect you personally", correct: false },
+                        { text: "Organizing a community cleanup day", correct: true },
+                        { text: "Assuming someone else will handle environmental problems", correct: false },
+                        { text: "Using disposable items for convenience", correct: false }
+                    ],
+                    explanation: "Organizing community action shows kindness to both people and the planet we all share."
+                }
+            ];
 
-        function loadQuestion() {
-            const question = questions[currentQuestionIndex];
-            document.getElementById('quizQuestion').textContent = question.question;
+            const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
             
-            const optionsContainer = document.getElementById('quizOptions');
+            document.getElementById('questionText').textContent = randomQuestion.question;
+            const optionsContainer = document.querySelector('.quiz-options');
             optionsContainer.innerHTML = '';
             
-            question.options.forEach(option => {
+            randomQuestion.options.forEach(option => {
                 const optionDiv = document.createElement('div');
                 optionDiv.className = 'quiz-option';
                 optionDiv.textContent = option.text;
                 optionDiv.onclick = () => selectOption(optionDiv, option.correct);
                 optionsContainer.appendChild(optionDiv);
             });
-            
+
             document.getElementById('quizResult').style.display = 'none';
+            document.getElementById('submitBtn').textContent = 'Submit Answer';
+            document.getElementById('submitBtn').onclick = submitAnswer;
             selectedOption = null;
+            isCorrect = false;
         }
 
-        // Kindness tracker functionality
+        // Kindness Tracker
         let kindnessActs = [];
 
         function addKindnessAct() {
             const input = document.getElementById('kindnessInput');
             const act = input.value.trim();
             
-            if (act) {
-                const timestamp = new Date().toLocaleDateString();
-                kindnessActs.push({ act, timestamp });
-                
-                const listContainer = document.getElementById('kindnessList');
+            if (act === '') {
+                alert('Please describe your kind act!');
+                return;
+            }
+
+            kindnessActs.push({
+                act: act,
+                date: new Date().toLocaleDateString()
+            });
+
+            displayKindnessActs();
+            input.value = '';
+        }
+
+        function displayKindnessActs() {
+            const listContainer = document.getElementById('kindnessList');
+            listContainer.innerHTML = '';
+
+            kindnessActs.slice(-5).reverse().forEach((item, index) => {
                 const actElement = document.createElement('div');
                 actElement.className = 'tracker-item';
-                actElement.innerHTML = `<strong>${timestamp}:</strong> ${act}`;
+                actElement.innerHTML = `
+                    <strong>${item.date}:</strong> ${item.act}
+                `;
                 listContainer.appendChild(actElement);
-                
-                input.value = '';
-                updateKindnessCount();
-                
-                // Add celebration effect
-                actElement.style.transform = 'scale(0.8)';
-                actElement.style.opacity = '0';
-                setTimeout(() => {
-                    actElement.style.transform = 'scale(1)';
-                    actElement.style.opacity = '1';
-                    actElement.style.transition = 'all 0.3s ease';
-                }, 100);
+            });
+        }
+
+        // Enter key support for tracker
+        document.getElementById('kindnessInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addKindnessAct();
             }
-        }
-
-        function updateKindnessCount() {
-            const countElement = document.getElementById('kindnessCount');
-            const count = kindnessActs.length;
-            countElement.textContent = `${count} act${count !== 1 ? 's' : ''} of kindness recorded`;
-        }
-
-        // Activity details functionality
-        function showActivityDetails(activity) {
-            const activities = {
-                compliment: "💝 Compliment Challenge\n\nGive three genuine, specific compliments today:\n• Notice something unique about each person\n• Be specific about what you appreciate\n• Watch how their face lights up\n• Notice how giving compliments makes you feel\n\nTip: Focus on character traits, efforts, or talents rather than just appearance!",
-                
-                help: "🤝 Helper's High\n\nOffer help without being asked:\n• Look for someone carrying heavy things\n• Notice if someone seems confused or lost\n• Offer to explain something you understand well\n• Help clean up even if you didn't make the mess\n\nScience fact: Helping others releases endorphins that make you feel happier!",
-                
-                listen: "👂 Active Listening\n\nPractice giving your full attention:\n• Put away devices when someone is talking\n• Make eye contact and nod to show you're engaged\n• Ask follow-up questions about what they shared\n• Reflect back what you heard to show understanding\n\nResult: Deeper connections and people feeling truly heard!",
-                
-                include: "🌈 Inclusion Initiative\n\nMake everyone feel welcome:\n• Invite someone eating alone to join your table\n• Include quiet classmates in group activities\n• Translate or explain things for someone new\n• Create space for different perspectives in discussions\n\nImpact: Transform someone's entire day or even their whole school experience!",
-                
-                share: "🎁 Sharing Circle\n\nShare what you have with others:\n• Offer school supplies to someone who forgot theirs\n• Share your knowledge by tutoring or explaining\n• Bring extra snacks to share with classmates\n• Share books, games, or other resources\n\nTruth: Sharing multiplies joy instead of dividing it!",
-                
-                appreciate: "🌟 Appreciation Express\n\nExpress gratitude meaningfully:\n• Write a note to a teacher who helped you\n• Thank a friend for always being supportive\n• Acknowledge someone's positive impact on the class\n• Leave encouraging notes for people to find\n\nPower: Appreciation creates positive energy that spreads to others!"
-            };
-            
-            alert(activities[activity]);
-        }
-
-        // Floating hearts animation
-        function createFloatingHeart() {
-            const heartsContainer = document.getElementById('floatingHearts');
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + '%';
-            heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
-            heart.style.animationDelay = Math.random() * 2 + 's';
-            
-            heartsContainer.appendChild(heart);
-            
-            // Remove heart after animation
-            setTimeout(() => {
-                heart.remove();
-            }, 8000);
-        }
-
-        // Statistics counter animation
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                let current = 0;
-                const increment = target / 100;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        stat.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        stat.textContent = Math.floor(current);
-                    }
-                }, 30);
-            });
-        }
-
-        // Scroll animations and effects
-        function handleScroll() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            
-            // Parallax effect for hero
-            const hero = document.querySelector('.hero');
-            if (hero && scrolled < window.innerHeight) {
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-            
-            // Update navbar
-            const navbar = document.getElementById('navbar');
-            if (scrolled > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            // Update scroll indicator
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled_percentage = (winScroll / height) * 100;
-            document.getElementById('scrollIndicator').style.width = scrolled_percentage + '%';
-            
-            // Animate elements on scroll
-            const sections = document.querySelectorAll('.content-section, .stat-card');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        }
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
-        }
-
-        // Event listeners
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize quiz
-            loadQuestion();
-            
-            // Start floating hearts
-            setInterval(createFloatingHeart, 2000);
-            
-            // Animate stats when they come into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateStats();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            
-            const statsGrid = document.querySelector('.stats-grid');
-            if (statsGrid) {
-                observer.observe(statsGrid);
-            }
-            
-            // Mobile menu toggle
-            document.getElementById('navToggle').addEventListener('click', toggleMobileMenu);
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // Enter key for kindness tracker
-            document.getElementById('kindnessInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    addKindnessAct();
-                }
-            });
         });
-
-        // Scroll event listener
-        window.addEventListener('scroll', handleScroll);
-        
-        // Resize event listener
-        window.addEventListener('resize', function() {
-            // Close mobile menu on resize
-            document.getElementById('navMenu').classList.remove('active');
-        });
-               // Mobile menu toggle
-        document.getElementById('navToggle').addEventListener('click', function() {
-            const navMenu = document.getElementById('navMenu');
-            const navToggle = document.getElementById('navToggle');
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                const navMenu = document.getElementById('navMenu');
-                const navToggle = document.getElementById('navToggle');
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        // Add smooth scroll and interaction effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Navbar scroll effect
-            window.addEventListener('scroll', function() {
-                const navbar = document.getElementById('navbar');
-                if (window.scrollY > 50) {
-                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-                } else {
-                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-                }
-            });
-
-            // Parallax effect for floating shapes
-            document.addEventListener('mousemove', function(e) {
-                const shapes = document.querySelectorAll('.shape');
-                const mouseX = e.clientX / window.innerWidth;
-                const mouseY = e.clientY / window.innerHeight;
-                
-                shapes.forEach((shape, index) => {
-                    const speed = (index + 1) * 0.5;
-                    const x = (mouseX - 0.5) * speed * 50;
-                    const y = (mouseY - 0.5) * speed * 50;
-                    shape.style.transform = `translate(${x}px, ${y}px)`;
-                });
-            });
-
-            // Scroll animations for cards
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.story-card').forEach(card => {
-                observer.observe(card);
-            });
     </script>
 </body>
 </html>
